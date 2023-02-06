@@ -1,0 +1,79 @@
+.Title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;  
+    font-weight: 300;
+    font-size: 27px;
+    margin-left: 18px;
+}
+
+.ContainerBox{
+    display: flex;
+    justify-content: center;
+    Width: 325px;
+    Height:213px;
+    background-color: #C91D2E;
+    border-radius: 12px;
+    margin: 30px 18px;
+    transition: 0.3s ease;
+    cursor: pointer;
+   
+}
+.ContainerBox:hover{
+        transform: scale(1.05);
+      
+}
+   
+.ContainerBox:active{
+    transform: scale(0.95);
+  
+   }
+      
+
+.Descriptions{
+    display: flex;
+    flex-direction: column;
+    margin-right: 120px;
+    color: #FFFFFF;
+    font-size: 17px;
+    gap: 4px; 
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+
+}
+
+.TitleContainer{
+   color:#FFFFFF ; 
+   margin-bottom: 5px;
+}
+   .TitleContainer h1{
+    font-family: 'Roboto', sans-serif;  
+     font-weight: bold;
+     font-size: 25px;
+
+ }
+
+.MotinContainer{
+display: flex;
+justify-content: center;    
+}
+
+.HawksLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+
+}
+
+.nada{
+    margin-left: 130px;
+}
+
+.CenterItens{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
