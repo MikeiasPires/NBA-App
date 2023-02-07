@@ -34,7 +34,7 @@
 .Descriptions{
     display: flex;
     flex-direction: column;
-    margin-right: 120px;
+    margin-left: 26px;
     color: #FFFFFF;
     font-size: 17px;
     gap: 4px; 
@@ -72,8 +72,45 @@ justify-content: center;
     margin-left: 130px;
 }
 
+#Bar{
+    height: 140px;
+    border-right: 1px solid #FFFFFF;
+    border-radius: 8px;
+    margin-right: 6px;
+}
+
 .CenterItens{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 4px;
+    margin: 10px 0px;
+    
+
+}
+
+.MotionsPlayers img{
+position: relative;
+right: 22px;
+top: 6px;
+}
+
+.MotionsPlayers label{
+    color: #FFFFFF;
+    font-family: italic, 'Roboto Condensed', sans-serif;
+    margin-top: 90px;
+}
+.Button button{
+    width: 250px;
+    height: 46px;
+    background-color: #313132;
+    border-radius: 8px;
+    font-size: 22px;
+    font-family: italic, 'Roboto Condensed', sans-serif;
+    color:  #FFFFFF;
+}
+
+
+.Teste{
+    bottom: 40px;
+    position: sticky;
 }
