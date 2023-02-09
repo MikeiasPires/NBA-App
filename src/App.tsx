@@ -1,12 +1,13 @@
 import { useState } from 'react'
-import Favotire from './Page/Favorite'
+import { Outlet } from 'react-router-dom'
 import './Global.css'
+import NbaTimes from './Page/Times'
 
 function App() {
 
   return (
     <>
-     <Favotire/>
+    <Outlet/>
     </>
   )
 }

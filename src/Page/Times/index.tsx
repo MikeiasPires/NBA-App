@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../Components/Header/Header";
-import "../Favorite/index.css";
+import "./index.css";
 import Trae from "../../assets/Favorite/TraeYung.svg";
 import Hawks from "../../assets/Favorite/Hawks.svg";
 
-const Favotire = () => {
+const NbaTimes = () => {
 
   const [capture, setCapture] = useState([])
   const [time, setTime] = useState([])
  
-
+console.log(capture)
 
 function SelectContainer (){
-setCapture(capture)
+
 }
 
 
 function ArmazenTime (){
-  console.log("WE2WS")
-}
 
+}
 
 
   const options = {
@@ -41,7 +40,7 @@ function ArmazenTime (){
     <>
       <Header />
       <div className="Title">
-        <span>Qual é o seu time </span>
+        <span>Selecione seu time </span>
         <span>preferido ?</span>
       </div>
       <div>
@@ -73,16 +72,14 @@ function ArmazenTime (){
             </div>
           </div>
         </div>)} 
-        <div className="Teste">
         <div className="Button">
           <button type="button" onClick={ArmazenTime}>
             Salve seu Time
             </button>
-        </div>
         </div>
       </div>
     </>
   );
 };
 
-export default Favotire;
+export default NbaTimes;

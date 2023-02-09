@@ -15,7 +15,7 @@
     Height:213px;
     background-color: #C91D2E;
     border-radius: 12px;
-    margin: 30px 18px;
+    margin: 30px 30px;
     transition: 0.3s ease;
     cursor: pointer;
    
@@ -40,7 +40,6 @@
     gap: 4px; 
     font-size: 18px;
     font-family: 'Roboto Condensed', sans-serif;
-    
 
 }
 
@@ -51,7 +50,7 @@
    .TitleContainer h1{
     font-family: 'Roboto', sans-serif;  
      font-weight: bold;
-     font-size: 25px;
+     font-size: 22px;
 
  }
 
@@ -107,10 +106,17 @@ top: 6px;
     font-size: 22px;
     font-family: italic, 'Roboto Condensed', sans-serif;
     color:  #FFFFFF;
+    cursor: pointer;
+    transition: 0.5s;
 }
+.Button button:hover{  
+    background-color: rgba(7, 7, 7, 0.973)
+}
+
 
 
 .Teste{
     bottom: 40px;
+
     position: sticky;
 }
