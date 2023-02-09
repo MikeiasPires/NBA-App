@@ -7,10 +7,12 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom"
 
 import NbaTimes from './Page/Times'
 import Favorite from './PageFavorite'
+import ErrorPage from '../src/Error/ErrorPage'
 
 const router = createBrowserRouter([
   {
     path:"/",
+    errorElement:<ErrorPage/>,
     element: <App/>,
       children:[
       {

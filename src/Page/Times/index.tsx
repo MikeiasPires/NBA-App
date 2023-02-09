@@ -3,23 +3,27 @@ import Header from "../../Components/Header/Header";
 import "./index.css";
 import Trae from "../../assets/Favorite/TraeYung.svg";
 import Hawks from "../../assets/Favorite/Hawks.svg";
+import { useNavigate } from "react-router-dom";
 
 const NbaTimes = () => {
 
   const [capture, setCapture] = useState([])
+  const [gettime, getTime] = useState([])
   const [time, setTime] = useState([])
- 
-console.log(capture)
+  const navigate = useNavigate()
 
-function SelectContainer (){
-
+function SelectContainer (id){
+  const selectTime = time.find(times => times.id === id)
+  getTime(selectTime);
+console.log(gettime)
 }
 
 
 function ArmazenTime (){
-
+  setTime(getTime)
+  return navigate("/Favorite")
+  
 }
-
 
   const options = {
     method: 'GET',
@@ -44,10 +48,7 @@ function ArmazenTime (){
         <span>preferido ?</span>
       </div>
       <div>
-      {time.map((cap)=> <div className="ContainerBox" onClick={SelectContainer} >
-          <div>
-            <img src="" alt="" />
-          </div>
+      {time.map((cap)=> <div className="ContainerBox" onClick={() => SelectContainer(cap.id)} >
           <div className="MotinContainer">
             <div className="Descriptions">
               <div className="nada">
@@ -73,7 +74,7 @@ function ArmazenTime (){
           </div>
         </div>)} 
         <div className="Button">
-          <button type="button" onClick={ArmazenTime}>
+       <button type="button" onClick={ArmazenTime}>
             Salve seu Time
             </button>
         </div>
