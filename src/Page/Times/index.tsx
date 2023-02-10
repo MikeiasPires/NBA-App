@@ -8,21 +8,20 @@ import { useNavigate } from "react-router-dom";
 const NbaTimes = () => {
 
   const [capture, setCapture] = useState([])
-  const [gettime, getTime] = useState([])
+  const [gettime, setGetTime] = useState([])
   const [time, setTime] = useState([])
   const navigate = useNavigate()
 
 function SelectContainer (id){
   const selectTime = time.find(times => times.id === id)
-  getTime(selectTime);
-console.log(gettime)
+  setGetTime(selectTime);
 }
 
 
 function ArmazenTime (){
-  setTime(getTime)
+  setGetTime(gettime)
+  console.log(gettime)
   return navigate("/Favorite")
-  
 }
 
   const options = {
