@@ -107,7 +107,7 @@ top: 6px;
     font-family: italic, 'Roboto Condensed', sans-serif;
     color:  #FFFFFF;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.5cs;
 }
 .Button button:hover{  
     background-color: rgba(7, 7, 7, 0.973)
@@ -116,6 +116,12 @@ top: 6px;
 
 
 .Teste{
+    bottom: 40px;
+
+    position: sticky;
+}
+
+.MotionButton{
     bottom: 40px;
 
     position: sticky;
