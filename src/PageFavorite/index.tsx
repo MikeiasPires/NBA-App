@@ -3,7 +3,7 @@ import Header from "../Components/Header/Header";
 import Trae from "../assets/Favorite/TraeYung.svg";
 import Hawks from "../assets/Favorite/Hawks.svg";
 import { useTime } from "../Context/MyContext";
-
+import '../PageFavorite/index.css'
 
 interface oneTime{
   city:string;
@@ -15,41 +15,42 @@ interface oneTime{
 }
 
 const Favorite = ({}) => {
-  const { getTime } = useTime();
+  const { getTime, setGetTime } = useTime();
 
-  console.log(getTime);
+  const arra = Object.values(getTime);
+ 
+  console.log(arra)
 
 return (
   <>
   <Header />
-  {getTime.map((gettim : oneTime) => 
-      <div className="ContainerBox" key={gettim.name}>
-      <div className="MotinContainer">
-        <div className="Descriptions">
-          <div className="nada">
-            <div className="HawksLogo">
-              <img src={Hawks} />
-            </div>
+    { arra.length <= 1 ? <>
+    </> : 
+    <div className="ContainerBox"  >
+    <div className="MotinContainer">
+      <div className="Descriptions">
+        <div className="nada">
+          <div className="HawksLogo">
+            <img src={Hawks} />
           </div>
-          <div className="TitleContainer">
-            <h1>{gettim.full_name}</h1>
-          </div>
-          <span>city:{gettim.city}</span>
-          <span>abreviation:{gettim.abbreviation}</span>
-          <span>conference:{gettim.conference}</span>
-          <span>division:{gettim.division}</span>
         </div>
-        <div className="MotionsPlayers">
-          <div className="CenterItens">
-            <div id="Bar"></div>
-            <label>Trae Young</label>
-            <img src={Trae} width="110px" />
-          </div>
+        <div className="TitleContainer">
+          <h1> {arra[5]}</h1>
+        </div>
+        <span>city: {arra[2]}</span>
+        <span>abreviation: {arra[1]}</span>
+        <span>conference: {arra[3]}</span>
+        <span>division: {arra[4]}</span>
+      </div>
+      <div className="MotionsPlayers">
+        <div className="CenterItens">
+          <div id="Bar"></div>
+          <label>Trae Young</label>
+          <img src={Trae} width="110px" />
         </div>
       </div>
     </div>
-    )
-  }
+  </div>  }
   </>
 )
 }

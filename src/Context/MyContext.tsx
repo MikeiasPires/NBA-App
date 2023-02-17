@@ -15,16 +15,17 @@ interface oneTime{
   }
 
 
+
 const MyContext = React.createContext({} as Context);
 
 export function MyProvider({ children }: any) {
     const [getTime, setGetTime] = useState<oneTime[]>([]);
-
-    return (
+ 
+   return (
         <MyContext.Provider
             value={{
                 getTime,
-                setGetTime
+                setGetTime,
             }}>
             {children}
         </MyContext.Provider>

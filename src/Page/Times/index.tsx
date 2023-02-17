@@ -5,6 +5,7 @@ import Trae from "../../assets/Favorite/TraeYung.svg";
 import Hawks from "../../assets/Favorite/Hawks.svg";
 import { useNavigate } from "react-router-dom";
 import { useTime } from "../../Context/MyContext";
+import BarNavigate from "../../Components/BarNavegation";
 
 
 interface Times {
@@ -20,6 +21,8 @@ const NbaTimes = () => {
   const [time, setTime] = useState<Times[]>([]);
   const navigate = useNavigate();
   const { setGetTime } = useTime();
+  const [ searchTime ,setSearchTime] = useState("")  
+  const [timequant, setTimeQuant] = useState("")
 
   const options = {
     method: "GET",
@@ -28,6 +31,21 @@ const NbaTimes = () => {
       "X-RapidAPI-Host": "free-nba.p.rapidapi.com",
     },
   };
+
+  function HandleText(e){
+         setSearchTime(e.target.value)
+        const pushTime = time.map(nam => nam.full_name)
+        const stringTimes= pushTime.join(',');
+        const seach = time.filter(item => item.full_name.toLowerCase().includes(searchTime.toLowerCase()))
+        if(seach.length === 0){
+        setTime(time);
+        }else if(searchTime === ""){
+          setTime(time);
+        }else{
+          setTime(seach);
+        }
+        console.log(pushTime)
+  }
 
   function ArmazenTime() {
     return navigate("/Favorite");
@@ -48,8 +66,13 @@ const NbaTimes = () => {
         <span>preferido ?</span>
       </div>
       <div>
+      <div className="Textinput">
+    < input type="text" value={searchTime} placeholder="Insira um time.."  onChange={ e => HandleText(e)}/>
+      </div>
+      </div>
+      <div>
         {time.map((cap: Times) => (
-          <div className="ContainerBox"  key={cap.name} onClick={() => setGetTime(cap)}>
+          <div className="ContainerBox"  key={cap.name} onClick={() => setGetTime(cap,)}>
             <div className="MotinContainer">
               <div className="Descriptions">
                 <div className="nada">

@@ -1,0 +1,77 @@
+.ContainerBox2{
+    display: flex;
+    justify-content: center;
+    Width: 325px;
+    Height:213px;
+    background-color: #C91D2E;
+    border-radius: 12px;
+    margin: 30px 30px;
+    transition: 0.3s ease;
+    cursor: pointer;
+   
+}
+
+.ContainerBox2:hover{
+    transform: scale(1.05);
+  
+}
+
+.ContainerBox2:active{
+transform: scale(0.95);
+
+}
+  
+.MotinContainer2{
+    display: flex;
+    justify-content: center;    
+    }
+
+.Descriptions2{
+        display: flex;
+        flex-direction: column;
+        margin-left: 26px;
+        color: #FFFFFF;
+        font-size: 17px;
+        gap: 4px; 
+        font-size: 18px;
+        font-family: 'Roboto Condensed', sans-serif;
+    
+    }
+
+.nada2{
+        margin-left: 130px;
+    }
+    
+    .TitleContainer2{
+        color:#FFFFFF ; 
+        margin-bottom: 5px;
+     }
+        .TitleContainer2 h1{
+         font-family: 'Roboto', sans-serif;  
+          font-weight: bold;
+          font-size: 22px;
+     
+      }
+
+.MotionsPlayers2 img{
+    position: relative;
+    right: 22px;
+    top: 6px;
+    }
+
+
+.CenterItens2{
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin: 10px 0px;
+        
+    
+    }
+
+#Bar{
+        height: 140px;
+        border-right: 1px solid #FFFFFF;
+        border-radius: 8px;
+        margin-right: 6px;
+    }
